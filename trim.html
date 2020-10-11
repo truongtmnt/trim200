@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<title>Trim 200</title>
+	</head>
+	<body
+		style="
+			background: #00d2ff;
+			background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+			background: linear-gradient(to right, #3a7bd5, #00d2ff);
+		"
+	>
+		<div class="container mt-5 text-light">
+			<h1 class="mb-3">Get quick excerpt...</h1>
+			<div class="form-group">
+				<label for="text">Input text:</label>
+				<textarea
+					class="form-control rounded-1 m-2"
+					id="text-container"
+					rows="5"
+					cols="30"
+					placeholder="Text here..."
+				></textarea>
+				<p style="font-size: 0.8rem" class="text-warning" id="length">
+					Length:
+				</p>
+			</div>
+			<hr class="border border-warning" />
+			<div class="form-group">
+				<p class="lead mr-2 font-weight-bold">Result:</p>
+				<label class="mr-2" id="max">Number of Characters: </label>
+				<input
+					type="number"
+					value="200"
+					style="width: 60px"
+					class="border rounded pl-1"
+					id="maxInput"
+				/>
+				<div
+					class="border rounded bg-light text-primary p-2 m-2"
+					id="result-container"
+				>
+					...
+				</div>
+			</div>
+			<button
+				class="btn btn-success m-2"
+				data-toggle="popover"
+				data-content="Copy to Clipboard"
+				data-timeout="500"
+				onclick="CopyToClipboard()"
+			>
+				Copy
+			</button>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="trim.js"></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
